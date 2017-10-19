@@ -14,5 +14,7 @@ MarkdownManager是一个PHP项目，可以管理自己的markdown文档并提供
 # 依赖说明
 
 * php 7
+* Apache 2.4
 * editor.md
 * Wiz.editor
+* Bootstrap 3.0
