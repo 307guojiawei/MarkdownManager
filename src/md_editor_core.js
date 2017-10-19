@@ -12,7 +12,7 @@ $(function() {
     var filesFullPath = getLocalFilesPath();
     var pluginFullPath = getPluginPath();
     var optionSettings = getOptionSettings();
-    var code = loadDocument();
+    //var code = loadDocument();
 
     //分清是不是快捷键保存，解决为知4.5版本自动保存问题
     var wizVerisonGreaterThan45 = null;
@@ -33,7 +33,7 @@ $(function() {
         theme           : optionSettings.EditToolbarTheme,        // 工具栏区域主题样式，见editormd.themes定义，夜间模式dark
         editorTheme     : optionSettings.EditEditorTheme,         // 编辑器区域主题样式，见editormd.editorThemes定义，夜间模式pastel-on-dark
         previewTheme    : optionSettings.EditPreviewTheme,        // 预览区区域主题样式，见editormd.previewThemes定义，夜间模式dark
-        value           : code,
+        
         path            : "./lib/",
         htmlDecode      : "style,script,iframe",  // 开启HTML标签解析，为了安全性，默认不开启
         codeFold        : true,              // 代码折叠，默认关闭
@@ -47,7 +47,7 @@ $(function() {
         emoji           : false,              // Emoji表情，默认关闭
         taskList        : true,              // Task lists，默认关闭
         disabledKeyMaps : [
-                          // 禁用切换全屏状态，因为为知已经支持
+                          
         ],
         keymapMode      : optionSettings.KeymapMode,              // 键盘映射模式
         toolbarIcons : function() {
@@ -319,7 +319,7 @@ $(function() {
                 "link", "quote", "code", "image", "|",
                 "list-ol", "list-ul", "h1", "hr", "|",
                 "undo", "redo", "||",
-                "outlineIcon", "counterIcon", "optionsIcon", "help", "info"
+                "outlineIcon", "counterIcon", "optionsIcon", "help", "info","fullscreen"
             ];
         } else{
             return [
@@ -330,7 +330,7 @@ $(function() {
                 "list-ul", "list-ol", "hr", "|",
                 "plainPasteIcon", "link", "reference-link", "image",  "code", "preformatted-text", "code-block", "table", "datetime",  "pagebreak", "|",
                 "goto-line", "watch", "preview", "clear", "search", 
-                "outlineIcon", "counterIcon", "optionsIcon", "help", "info"
+                "outlineIcon", "counterIcon", "optionsIcon","fullscreen", "help", "info"
             ];
         };
     };

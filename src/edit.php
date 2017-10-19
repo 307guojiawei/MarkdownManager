@@ -21,9 +21,13 @@ if($_SESSION['usr']!="admin")
         <link rel="stylesheet" href="./css/editormd.css" />
         <link rel="stylesheet" href="./css/bootstrap.min.css" />
         <link rel="shortcut icon" href="https://pandao.github.io/editor.md/favicon.ico" type="image/x-icon" />
-        
+        <script src="http://eruda.liriliri.io/eruda.min.js"></script>
+        <script type="text/javascript">
+            //eruda.init();
+        </script>
     </head>
     <body>
+        <div id="test"></div> 
         <div id="layout" class="container">
             <div class="row">
                 <div class="col-md-12">
@@ -60,42 +64,14 @@ if($_SESSION['usr']!="admin")
         </div>
         <script src="./js/jquery.min.js"></script>
         <script src="./js/editormd.js"></script>
-        <script type="text/javascript"></script>
+        
         <script src="to-markdown/to-markdown.js"></script>
         <script src="md_editor_core.js">
-        /*
-			var testEditor;
-
-            $(function() {
-                testEditor = editormd("test-editormd", {
-                    width   : "100%",
-                    height  : 800,
-                    syncScrolling : "single",
-                    path    : "./lib/",
-                    saveHTMLToTextarea : true,
-
-                    taskList : true,
-                    tocm            : true,         // Using [TOCM]
-                    tex: true,  // 开启科学公式TeX语言支持，默认关闭
-                    emoji: true,//emoji表情，默认关闭
-                     flowChart : true,             // 开启流程图支持，默认关闭
-                    sequenceDiagram : true,       // 开启时序/序列图支持，默认关闭,
-
-                    imageUpload : true,
-                    imageFormats : ["jpg", "jpeg", "gif", "png", "bmp", "webp"],
-                    imageUploadURL : "./upload/upload.php/",
-                });
-                
-                /*
-                // or
-                testEditor = editormd({
-                    id      : "test-editormd",
-                    width   : "90%",
-                    height  : 640,
-                    path    : "../lib/"
-                });
-                */
-            });
+           
+            
+        </script>
+        <script type="text/javascript">
+            console.log("Hello");
         </script>
         <script src="./js/bootstrap.min.js"></script>
     </body>
