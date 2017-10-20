@@ -16,7 +16,7 @@ MarkdownManager是一个基于PHP项目的个人markdown文档管理平台，可
 # 部署说明
 本项目基于php,绿色项目，无其他数据库依赖，配置好php环境即可安装部署
 
-1. 安装并配置apatche 参考 `linux安装lamp` http://wiki.ubuntu.org.cn/index.php?title=Apache&redirect=no#.E5.AE.89.E8.A3.85LAMP
+1. 安装并配置apache 参考 `linux安装lamp` http://wiki.ubuntu.org.cn/index.php?title=Apache&redirect=no#.E5.AE.89.E8.A3.85LAMP
 2. 将项目md.tar解压后拖入web root下
 3. 修改env.php中的Env类中的pwd，为私密密码
 4. 安装完成
