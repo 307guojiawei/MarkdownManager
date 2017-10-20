@@ -15,12 +15,15 @@
         $path=$fileDir.$fileName.$fileType;
         $myfile = fopen($path, "w");
         fwrite($myfile, $_POST['my-editormd-markdown-doc']);
+	//echo $_POST['my-editormd-markdown-doc'];
         fclose($myfile);
-
-        $htmlPath=$fileDir.$fileName.$htmlType;
-        $myfile2 = fopen($htmlPath, "w");
-        fwrite($myfile2, $_POST['test-editormd-html-code']);
-        fclose($myfile2);
+	$logFile=fopen("./log.txt","a");
+	fwrite($logFile,date("Y/m/d h:i:s")." wirte:".$path."\n");
+	fclose($logFile);
+       // $htmlPath=$fileDir.$fileName.$htmlType;
+       // $myfile2 = fopen($htmlPath, "w");
+       // fwrite($myfile2, $_POST['test-editormd-html-code']);
+       // fclose($myfile2);
     }
 	
 ?>

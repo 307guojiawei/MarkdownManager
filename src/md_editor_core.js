@@ -425,7 +425,7 @@ $(function() {
     ////////////////////////////////////////////////
     // 保存文档
     saveDocument = function () {
-        if (objDocument) {
+        /*if (objDocument) {
             var doc = wizEditor.getValue();
             var arrResult = dealImgDoc(doc);
             if (arrResult[0] != doc) {
@@ -443,11 +443,33 @@ $(function() {
             objDocument.UpdateDocument3(doc, 0);
             modified = false;
         }
+        console.log("OK");
+        var id=document.getElementById("file").innerHTML;
+                $.ajax({  
+                type: "POST",  
+                url:"./saveFile.php?name="+id,  
+                data:$('#main').serialize(),  
+                async: false,  
+                error: function(request) {  
+                    //alert("Connection error");  
+                    showMsg("同步失败");
+                },  
+                success: function(data) {  
+                    //alert("Success");
+                    showMsg("同步成功");
+                }  
+              });*/
     };
-
+    showMsg = function(msg)
+            {
+                document.getElementById("showMsg").style.display="block";
+                document.getElementById("msg").innerHTML=msg;
+                window.setTimeout("document.getElementById('showMsg').style.display='none';",1000);
+            }
     ////////////////////////////////////////////////
     // Ctrl+S保存调用
     OnPluginSaveMDEditor = function () {
+        //console.log("OK");
         if (wizVerisonGreaterThan45) {
             if (modified && wantSaveKey && wantSaveTime) {
                 wantSaveKey = false;
