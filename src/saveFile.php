@@ -24,7 +24,12 @@
        // $myfile2 = fopen($htmlPath, "w");
        // fwrite($myfile2, $_POST['test-editormd-html-code']);
        // fclose($myfile2);
+       ?>
+       Success
+       <?php
+    }else {
+        ?>Fail.login first<?php
     }
 	
 ?>
-<meta http-equiv="refresh" content="0.5;url=./index.php">
+
