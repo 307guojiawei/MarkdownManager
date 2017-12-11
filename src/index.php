@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <?php 
     session_start();
-    include "env.php";
     header("Content-Type: text/html;charset=utf-8"); 
     if(isset($_GET['op']))
     {
@@ -15,9 +14,8 @@
                 <?php 
 
             }else
-                $pwdd = $_POST['pwd'];
-            
-            if($pwdd == Env::$pwd)
+                $pwd = $_POST['pwd'];
+            if($pwd == "gjw961128")
             {
                 $_SESSION["usr"]="admin";
             }else
@@ -62,7 +60,8 @@
             }
         }
         
-    } ?>
+    }
+     ?>
 <html lang="zh">
     <head>
         <meta charset="utf-8" />
@@ -72,18 +71,20 @@
         
         
         <link rel="stylesheet" href="./css/bootstrap.min.css" />
+        <link rel="stylesheet" href="./css/indexStyle.css" />
         <link rel="shortcut icon" href="https://pandao.github.io/editor.md/favicon.ico" type="image/x-icon" />
         <script src="./js/jquery.min.js"></script>
         <script src="./js/bootstrap.min.js"></script>
         
 
     </head>
-    <body>
+    <body >
+        <img class="bg" src="bing.php" />
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
                     <div class="page-header">
-                      <h1>MarkDown文件管理 <small>List of files</small></h1>
+                      <h1>MarkDown文件管理 <small style="color:#ffffff">List of files</small></h1>
                     </div>
                 </div>
             </div>
@@ -98,7 +99,7 @@
                                 if($file =="\n" || $file == "")continue;
                             ?>
                                 <li class="list-group-item"> 
-                                    <a href="./view.php?name=<?php echo $file; ?>" ><h2><?php echo $file; ?></h2></a><br>
+                                    <a style="color: #ffffff!important;" href="./view.php?name=<?php echo $file; ?>" ><h2><?php echo $file; ?></h2></a><br>
                                     <?php if(isset($_SESSION['usr'])&&$_SESSION['usr']=="admin"){ ?><a class="btn btn-sm btn-danger" href="./index.php?op=delete&name=<?php echo $file; ?>">删除</a>
                                     <a class="btn btn-sm btn-info" href="./edit.php?name=<?php echo $file; ?>">编辑</a><?php } ?>
                                 </li>
@@ -151,5 +152,24 @@
             <hr>
             <?php } ?>
         </div>
+        <!--
+        <script type="text/javascript">
+            function getBingPic()
+            {
+                $.ajax({  
+                        type: "GET",  
+                        url:"http://cn.bing.com/HPImageArchive.aspx?format=json&idx=0&n=1",
+                        data: null,  
+                        async: false,  
+                        error: function(request) {  
+                            
+                        },  
+                        success: function(data) {  
+                            alert(data);
+                        }  
+                    });
+            }
+            getBingPic();
+        </script>-->
     </body>
 </html>

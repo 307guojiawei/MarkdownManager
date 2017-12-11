@@ -18,6 +18,7 @@ if($_SESSION['usr']!="admin")
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Edit</title>
         <link rel="stylesheet" href="./css/style.css" />
+        <link rel="stylesheet" href="./css/indexStyle.css" />
         <link rel="stylesheet" href="./css/editormd.css" />
         <link rel="stylesheet" href="./css/bootstrap.min.css" />
         <link rel="shortcut icon" href="https://pandao.github.io/editor.md/favicon.ico" type="image/x-icon" />
@@ -27,6 +28,8 @@ if($_SESSION['usr']!="admin")
         </script>
     </head>
     <body>
+        <img class="bg" src="bing.php" />
+        
         <div id="test"></div> 
         <div  id="showMsg" style="width:100%;position:fixed;z-index:999;display:none;" class="alert alert-warning alert-dismissible" role="alert">
                   <a href="javascript:close();" class="close"  aria-label="Close"><span aria-hidden="true">&times;</span></a>
@@ -86,15 +89,15 @@ if($_SESSION['usr']!="admin")
         
         
         <!-- Modal -->
-                    <div style="" class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-                      <div class="modal-dialog" role="document">
+                    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                      <div class="modal-dialog"  role="document">
                         <div class="modal-content">
                           <div class="modal-header">
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                             <h4 class="modal-title" id="myModalLabel">历史记录</h4>
                           </div>
                           <div class="modal-body">
-                            <textarea style="height:300px;width:100%;resize:none" disabled="disabled" id="history"></textarea>
+                            <textarea style="color:#000000;height:300px;width:100%;resize:none" disabled="disabled" id="history"></textarea>
                             <script type="text/javascript">
                                 
                             </script>

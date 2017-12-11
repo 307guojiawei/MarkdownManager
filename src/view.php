@@ -8,6 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>View</title>
         <link rel="stylesheet" href="./css/editormd.css" />
+        <link rel="stylesheet" href="./css/indexStyle.css" />
         <link rel="stylesheet" href="./css/bootstrap.min.css" />
         <link rel="shortcut icon" href="https://pandao.github.io/editor.md/favicon.ico" type="image/x-icon" />
         <script src="./js/jquery.min.js"></script>
@@ -23,6 +24,7 @@
 
     </head>
     <body>
+        <img class="bg" src="bing.php" />
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
@@ -32,7 +34,7 @@
                 </div>
             </div>
             <div class="row">
-                <div id="doc-content">
+                <div id="doc-content" style="background-color: rgba(255,255,255,0.9)!important;">
                     <textarea style="display:none;">
                         <?php 
         
@@ -59,7 +61,7 @@
                     flowChart: true, // 默认不解析
                     sequenceDiagram: true, // 默认不解析
                     codeFold: true,
-                    path    : "./lib/",
+		    path    : "./lib/",
             });});
          </script>
     </body>
