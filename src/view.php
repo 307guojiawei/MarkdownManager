@@ -29,7 +29,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="page-header">
-                      <h1><?php echo $_GET['name']; ?><small><a href="./index.php">返回首页</a></small></h1>
+                      <h1><?php echo $_GET['name']; ?><small><a style="color:#ffffff" href="./index.php">返回首页</a></small></h1>
                     </div>
                 </div>
             </div>
