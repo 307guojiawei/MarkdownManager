@@ -29,7 +29,7 @@ if($_SESSION['usr']!="admin")
         </script>
     </head>
     <body>
-        <img class="bg" src="<?php echo getBing(); ?>" />
+        <img class="bg" style="object-fit: cover!important;"  src="<?php echo getBing(); ?>" />
         
         <div id="test"></div> 
         <div  id="showMsg" style="width:100%;position:fixed;z-index:999;display:none;" class="alert alert-warning alert-dismissible" role="alert">

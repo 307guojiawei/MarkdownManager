@@ -24,7 +24,7 @@
 
     </head>
     <body>
-        <img class="bg" src="<?php echo getBing(); ?>" />
+        <img class="bg" style="object-fit: cover!important;"  src="<?php echo getBing(); ?>" />
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
