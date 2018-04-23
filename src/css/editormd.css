@@ -3595,6 +3595,8 @@
 }
 
 .markdown-body img {
+    margin: 0 auto;
+    align-self: center;
   max-width: 100%;
   -moz-box-sizing: border-box;
   box-sizing: border-box;

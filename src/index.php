@@ -2,6 +2,13 @@
 <?php 
     session_start();
     header("Content-Type: text/html;charset=utf-8"); 
+    include("getBing.php");
+    if(!isset($_SESSION['usr']))
+    {
+        ?>
+        <meta http-equiv="refresh" content="0.1;url=./userControl/signin.html">
+        <?php
+    }
     if(isset($_GET['op']))
     {
         $op = $_GET['op'];
@@ -79,7 +86,7 @@
 
     </head>
     <body >
-        <img class="bg" src="bing.php" />
+        <img class="bg" src="<?php echo getBing(); ?>" />
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
@@ -132,7 +139,7 @@
             </div><hr>
             <div class="row">
                  <div class="col-md-12">
-                    <a class="btn btn-danger" href="./index.php?op=login">登出</a>
+                    <a class="btn btn-danger" href="./userControl/control.php">登出</a>
                 </div>
             </div>
             <hr>
@@ -152,24 +159,6 @@
             <hr>
             <?php } ?>
         </div>
-        <!--
-        <script type="text/javascript">
-            function getBingPic()
-            {
-                $.ajax({  
-                        type: "GET",  
-                        url:"http://cn.bing.com/HPImageArchive.aspx?format=json&idx=0&n=1",
-                        data: null,  
-                        async: false,  
-                        error: function(request) {  
-                            
-                        },  
-                        success: function(data) {  
-                            alert(data);
-                        }  
-                    });
-            }
-            getBingPic();
-        </script>-->
+        
     </body>
 </html>

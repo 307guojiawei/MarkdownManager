@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<?php header("Content-Type: text/html;charset=utf-8"); 
+<?php header("Content-Type: text/html;charset=utf-8"); include("getBing.php");
      ?>
 <html lang="zh">
     <head>
@@ -24,7 +24,7 @@
 
     </head>
     <body>
-        <img class="bg" src="bing.php" />
+        <img class="bg" src="<?php echo getBing(); ?>" />
         <div class="container">
             <div class="row">
                 <div class="col-md-12">

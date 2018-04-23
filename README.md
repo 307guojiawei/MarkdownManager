@@ -18,7 +18,7 @@ MarkdownManager是一个基于PHP项目的个人markdown文档管理平台，可
 
 1. 安装并配置apache 参考 `linux安装lamp` http://wiki.ubuntu.org.cn/index.php?title=Apache&redirect=no#.E5.AE.89.E8.A3.85LAMP
 2. 将项目md.tar解压后拖入web root下
-3. 修改env.php中的Env类中的pwd，为私密密码
+3. 修改./userControl/control.php中的用户名username和密码password，为私密密码
 4. 安装完成
 
 # 依赖说明

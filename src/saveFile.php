@@ -20,15 +20,12 @@
 	$logFile=fopen("./log.txt","a");
 	fwrite($logFile,date("Y/m/d h:i:s")." wirte:".$path."\n");
 	fclose($logFile);
-       // $htmlPath=$fileDir.$fileName.$htmlType;
-       // $myfile2 = fopen($htmlPath, "w");
-       // fwrite($myfile2, $_POST['test-editormd-html-code']);
-       // fclose($myfile2);
+       
        ?>
-       Success
+       Success-服务器端已保存
        <?php
     }else {
-        ?>Fail.login first<?php
+        ?>Fail.login first-未登录或连接中断<?php
     }
 	
 ?>

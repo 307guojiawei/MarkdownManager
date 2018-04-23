@@ -39,3 +39,9 @@ body{
 small{
     color:#ffffff!important;
 }
+
+img{
+   display:flex;
+justify-content:center;
+align-items:center;
+}

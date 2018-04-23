@@ -2,6 +2,7 @@
 <?php 
 session_start();
 header("Content-Type: text/html;charset=utf-8"); 
+include("getBing.php");
 if($_SESSION['usr']!="admin")
 {?>
     <meta http-equiv="refresh" content="0.1;url=./index.php">
@@ -28,7 +29,7 @@ if($_SESSION['usr']!="admin")
         </script>
     </head>
     <body>
-        <img class="bg" src="bing.php" />
+        <img class="bg" src="<?php echo getBing(); ?>" />
         
         <div id="test"></div> 
         <div  id="showMsg" style="width:100%;position:fixed;z-index:999;display:none;" class="alert alert-warning alert-dismissible" role="alert">
@@ -77,7 +78,7 @@ if($_SESSION['usr']!="admin")
                                     fclose($myfile);
                                 ?>
                             </textarea>
-                            <textarea id="my-editormd-html-code" name="my-editormd-html-code" style="display:none;"></textarea>
+                            
                         </div>
 
                     </form>
